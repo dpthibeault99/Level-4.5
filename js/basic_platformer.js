@@ -22,7 +22,6 @@ var player;
 		platform1.x = canvas.width-350;
 		platform1.y = platform0.y- platform0.height/2 - platform1.height/2;
 		platform1.color = "#f200ff";
-		platform1.vx = 0;
 		
 	platform2 = new GameObject();
 		platform2.width = canvas.width-300;
@@ -122,7 +121,8 @@ function animate()
 	
 	while(platform1.hitTestPoint(player.right()))
 	{
-		player.vx=0;
+		player.x--;
+		player.vx = 0;
 	}
 	
 	//---------Objective: Save Me!---------------------------------------------------------------------------------------------------- 
